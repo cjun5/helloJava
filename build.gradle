@@ -1,18 +1,27 @@
 plugins {
     id 'java'
+    id 'idea'
 }
 
 group 'com.devidea'
 version '0.1.0'
 
-sourceCompatibility = 1.8
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
 
 repositories {
     mavenCentral()
 }
 
+idea {
+    module {
+        downloadJavadoc = true
+    }
+}
+
 dependencies {
     compile group: 'org.springframework', name: 'spring-core', version: '5.2.4.RELEASE'
 
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile("org.junit.jupiter:junit-jupiter-api:5.0.1")
+    testRuntime("org.junit.jupiter:junit-jupiter-engine:5.0.1")
 }
