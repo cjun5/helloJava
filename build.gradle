@@ -20,6 +20,7 @@ idea {
 }
 
 dependencies {
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.18.12'
     compile group: 'org.springframework', name: 'spring-core', version: '5.2.4.RELEASE'
 
     testCompile("org.junit.jupiter:junit-jupiter-api:5.0.1")
